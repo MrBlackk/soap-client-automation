@@ -25,7 +25,7 @@ public class XmlFormatter {
 
             Document doc = DocumentHelper.parseText(xml);
             sw = new StringWriter();
-            OutputFormat format = OutputFormat.createCompactFormat();
+            OutputFormat format = OutputFormat.createPrettyPrint();
             format.setNewLineAfterDeclaration(false);
             XMLWriter xw = new XMLWriter(sw, format);
             xw.write(doc);
